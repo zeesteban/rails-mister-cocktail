@@ -1,3 +1,15 @@
 @import "alert";
 @import "avatars";
 @import "badges";
+@import "card";
+@import "show";
+
+body {
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+h1, h2, h3{
+  font-family: 'Montserrat', sans-serif;
+}

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root to: 'cocktails#home'
+
   resources :cocktails do
 
   resources :doses, only: [:new, :create]
@@ -8,6 +10,6 @@ Rails.application.routes.draw do
 
   resources :doses, only: [:destroy]
 
-mount Attachinary::Engine => "/attachinary"
+  mount Attachinary::Engine => "/attachinary"
 
 end

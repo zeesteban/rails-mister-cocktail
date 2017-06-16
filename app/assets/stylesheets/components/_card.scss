@@ -1,0 +1,64 @@
+.cocktail-card {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.title{
+  padding-top: 50px;
+}
+
+
+.card-detail{
+  margin-top: 20px;
+
+}
+
+.card-image{
+  border-radius: 50%;
+  filter: grayscale(40%)
+
+}
+
+.footer{
+  margin-bottom: -2px;
+}
+// .poster{
+//   filter: grayscale(100%)
+// }
+
+.card-image:hover{
+  filter: grayscale(0)
+}
+
+.card-destroy{
+  margin-top: 20px;
+
+}
+
+.card-name h2{
+
+  text-align: center;
+  // margin-bottom: 100px;
+  // margin-left: 100px;
+
+}
+
+.footer:hover{
+text-decoration: none;
+
+}
+
+
+
+.badge-container {
+  position: relative;
+  font-size: 25px;
+  line-height: 30px;
+  width: 30px;
+  color: grey;
+}
+
+
+.card-detail{
+
+}

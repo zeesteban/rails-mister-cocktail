@@ -1,17 +1,47 @@
-<h1>All The Cocktailz</h1>
 
-<ul>
+
+<div class="container padded">
+  <div class="row text-center">
+
+
 <% @cocktails.each do |c| %>
 
+<div class="col-xs-12 col-sm-4 cocktail-card">
+<div class = "card-name text-center"> <h2> <%= c.name %> </h2></div>
 
-<li>
-<%= c.name %> |
 
-<%= link_to "details", cocktail_path(c) %> |
-<%= link_to "Delete Cocktail", cocktail_path(c), method: :delete %>
 
-</li>
+<% if c.photo? %>
+  <%= cl_image_tag c.photo.path, width: 350, height: 350, crop: :fill, class: 'card-image' %>
 <% end %>
-</ul>
 
-<%= link_to "New Cocktail", new_cocktail_path%>
+
+
+<div class = "text-center"> <%= link_to "details", cocktail_path(c), class: 'btn btn-danger card-detail' %> </div>
+<div class = "text-center"> <%= link_to "Delete Cocktail", cocktail_path(c), method: :delete, class: 'btn btn-danger card-destroy' %> </div>
+
+</div>
+
+<% end %>
+
+
+
+
+
+  </div>
+</div>
+
+
+
+<div class= "text-center">
+<%= link_to "New Cocktail", new_cocktail_path, class: 'btn btn-danger footer'%>
+</div>
+
+</div>
+<br>
+
+
+
+
+
+
