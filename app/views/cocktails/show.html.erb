@@ -7,6 +7,10 @@
 <%= d.ingredient.name %>
 </li>
 
+<% if @cocktail.photo? %>
+  <%= cl_image_tag @cocktail.photo.path, width: 200, height: 300, crop: :fill %>
+<% end %>
+
 <%= link_to "Delete Ingredient", dose_path(d), method: :delete %>
 
 <% end %>
@@ -16,5 +20,3 @@
 <%= link_to "back", cocktails_path %> |
 
 <%= link_to "Delete Cocktail", cocktail_path(@cocktail), method: :delete %>
-
-
